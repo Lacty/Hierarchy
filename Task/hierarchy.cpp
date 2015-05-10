@@ -8,13 +8,19 @@ void Hierarchy::addTask(const std::string& name,
   m_map.emplace(std::make_pair(name, obj));
 }
 
-void Hierarchy::update() {
+void Hierarchy::clear() {
+  m_list.clear();
+  m_map.clear();
+}
+
+
+void Hierarchy::update() const{
   for (auto& it : m_list) {
     it->update();
   }
 }
 
-void Hierarchy::draw() {
+void Hierarchy::draw() const{
   for (auto& it : m_list) {
     it->draw();
   }

@@ -17,7 +17,8 @@ public:
 
   void addTask(const std::string& name,
                const std::shared_ptr<HierarchyBehavior>& obj);
+  void clear();
 
-  void update();
-  void draw();
+  void update() const;
+  void draw()   const;
 };
